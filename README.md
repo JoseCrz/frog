@@ -3,7 +3,7 @@
 ![](https://www.repostatus.org/badges/latest/wip.svg)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
-This is a technical challegend for [Frog Design](https://www.frogdesign.com)
+This is a technical challegen for [Frog Design](https://www.frogdesign.com)
 
 ## 📱 Live Demo
 
