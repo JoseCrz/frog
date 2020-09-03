@@ -3,13 +3,15 @@ import { createGlobalStyle, css } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
 ${({ theme }) => css`
 :root {
-    --background: #FAFAFA;
-    --text: #01579b;
+    --background: #FFFFFF;
+    --text-color: #000000;
+    --text-font: 'Roboto', sans-serif;
+    --title-font: 'Comfortaa', cursive;
   }
   
   * {
     box-sizing: border-box;
-    font-family: Helvetica, sans-serif;
+    font-family: var(--text-font); 
   }
 
   body {
@@ -22,6 +24,7 @@ ${({ theme }) => css`
   h2,
   h3,
   h4 {
+    font-family: var(--title-font);
     color: var(--text);
   }
 
