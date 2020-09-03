@@ -3,11 +3,11 @@ import { Helmet } from 'react-helmet'
 
 import { Main } from './styles'
 
-export const Layout = ({ children, title }) => {
+export const Layout = ({ children, pageName }) => {
   return (
     <>
       <Helmet>
-        <title>{`Frog | ${title}`}</title>
+        <title>{`Frog | ${pageName}`}</title>
       </Helmet>
       <Main>
         {
