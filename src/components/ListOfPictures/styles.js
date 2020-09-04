@@ -16,3 +16,9 @@ export const Img = styled.img`
   max-width: 100%;
   vertical-align: middle;
 `
+
+export const P = styled.p`
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+`
