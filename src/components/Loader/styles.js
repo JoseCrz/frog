@@ -30,7 +30,7 @@ export const Container = styled.div`
 `
 
 export const Chase = styled.div`
-    margin: 50px 0;
+    margin: 80px 0;
     width: 50px;
     height: 50px;
     position: relative;
