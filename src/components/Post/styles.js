@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { fadeIn } from '../../styles/Animations'
 
 export const PostContainer = styled.div`
   display: inline-block;
@@ -17,6 +18,7 @@ export const ImgContainer = styled.div`
 `
 
 export const Img = styled.img`
+  ${fadeIn()}
   position: absolute;
   top: 0;
   width: 100%;
