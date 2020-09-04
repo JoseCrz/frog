@@ -19,6 +19,7 @@ export const Modal = ({ isModalOpen }) => {
           profileImage={user.profile_image.medium}
           name={user.name}
           username={user.username}
+          darkBackground
         />
       </Details>
     </Container>
