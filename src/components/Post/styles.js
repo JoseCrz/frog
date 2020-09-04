@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const PostContainer = styled.div`
   display: inline-block;
-  width: 100%;
+  width: 90%;
   margin-right: 16px;
   
   &::last-child {
