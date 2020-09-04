@@ -24,7 +24,7 @@ export const Modal = ({ isModalOpen }) => {
 
   return ReactDOM.createPortal(
     <Container>
-      <ThumbImg src={urls.small} isPictureLoaded={isPictureLoaded} />
+      <ThumbImg src={urls.regular} isPictureLoaded={isPictureLoaded} />
       <LoadedImage onLoad={handleOnLoad} src={urls.full} isPictureLoaded={isPictureLoaded} />
       <Details>
         <Arranger>

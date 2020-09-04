@@ -16,7 +16,7 @@ export const Picture = ({ picture }) => {
   return (
     <ImgContainer ref={element} aspectRatio={aspectRatio}>
       {
-        show && <Img onClick={handleOnClick} src={urls.small} />
+        show && <Img onClick={handleOnClick} src={urls.regular} />
       }
     </ImgContainer>
   )
