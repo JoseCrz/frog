@@ -1,27 +1,23 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import { Wrapper, H1 } from './styles'
+import { Navbar } from '../Navbar'
 
-export const Layout = ({ children, pageName, title }) => {
+import { Wrapper } from './styles'
+
+export const Layout = ({ children, pageName }) => {
   return (
     <>
       <Helmet>
         <title>{`Frog | ${pageName}`}</title>
       </Helmet>
       <Wrapper>
-        {
-          title && (
-            <header>
-              <H1>{title}</H1>
-            </header>
-          )
-        }
         <main>
           {
             children
           }
         </main>
+        <Navbar />
       </Wrapper>
     </>
   )
