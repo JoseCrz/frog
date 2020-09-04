@@ -4,6 +4,7 @@ export const Details = styled.div`
   margin-top: 16px;
   display: flex;
   align-items: center;
+  ${({ darkBackground }) => darkBackground && 'color: white;'}
 `
 
 export const ProfileImg = styled.img`
