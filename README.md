@@ -3,7 +3,7 @@
 ![](https://www.repostatus.org/badges/latest/wip.svg)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
-This is a technical challenge for [Frog Design](https://www.frogdesign.com)
+Technical challenge for [Frog Design](https://www.frogdesign.com). This is a mobile app that consumes Unsplash API.
 
 ## 📱 Live Demo
 
@@ -11,17 +11,20 @@ https://frog-app.vercel.app
 
 ## 🛠 Technology:
 * React
+* PropTypes
+* Hooks
 * Styled Components
-* Vercel
+* Babel
 * Webpack
-
+* Vercel
+****
 ## 📸 Screenshots
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-1.png)
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-2.png)
 ![](https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-3.png)
 
 ## ⚙️ Installation
-
+Download or clone this repository and run the following command:
 ```
 npm install
 ```
@@ -29,13 +32,13 @@ npm install
 ## 🏃🏻‍♂️ Run
 
 ### Development
-
+Run:
 ```
 npm run dev
 ```
 
 ### Build
-
+Run:
 ```
 npm run build
 ```
