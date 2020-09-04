@@ -1,6 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-// import { postsMock as pictures } from '../../mocks/postsMock'
 import { Post } from '../Post'
 import { Loader } from '../Loader'
 
@@ -28,4 +28,8 @@ export const ListOfPost = ({ listTitle }) => {
       }
     </>
   )
+}
+
+ListOfPost.propTypes = {
+  listTitle: PropTypes.string.isRequired
 }
