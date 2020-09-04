@@ -8,7 +8,7 @@ export const ListOfPictures = ({ pictures, listTitle }) => {
       <P>{listTitle}</P>
       <Grid>
         {
-          pictures.map(picture => <Picture key={picture.id} urls={picture.urls} width={picture.width} height={picture.height} />)
+          pictures.map(picture => <Picture key={picture.id} picture={picture} />)
         }
       </Grid>
     </>
