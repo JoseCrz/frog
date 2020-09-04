@@ -1,9 +1,10 @@
 import React from 'react'
 import { Layout } from '../../components/Layout'
+import { ListOfPost } from '../../components/ListOfPosts'
 export const Home = () => {
   return (
     <Layout title='Discover' pageName='Home'>
-      <h1>Hello there</h1>
+      <ListOfPost listTitle={'What\'s new today'} />
     </Layout>
   )
 }
