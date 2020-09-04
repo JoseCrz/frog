@@ -1,26 +1,43 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import ReactDOM from 'react-dom'
+import { VscChromeClose } from 'react-icons/vsc'
+
 import { Context } from '../../Context'
 
 import { UserDetails } from '../UserDetails'
 
-import { Container, Img, Details } from './styles'
+import { Container, Arranger, ThumbImg, LoadedImage, Details, CloseButton } from './styles'
 
 export const Modal = ({ isModalOpen }) => {
-  const { currentPicture } = useContext(Context)
+  const { currentPicture, deactivateModal } = useContext(Context)
+  const [isPictureLoaded, setIsPictureLoaded] = useState(false)
   const { urls, user } = currentPicture
 
+  const handleOnLoad = () => setIsPictureLoaded(true)
+
+  const handleOnClick = () => {
+    setIsPictureLoaded(false)
+    deactivateModal()
+  }
+
   if (!isModalOpen) return null
+
   return ReactDOM.createPortal(
     <Container>
-      <Img src={urls.full} />
+      <ThumbImg src={urls.small} isPictureLoaded={isPictureLoaded} />
+      <LoadedImage onLoad={handleOnLoad} src={urls.full} isPictureLoaded={isPictureLoaded} />
       <Details>
-        <UserDetails
-          profileImage={user.profile_image.medium}
-          name={user.name}
-          username={user.username}
-          darkBackground
-        />
+        <Arranger>
+          <UserDetails
+            profileImage={user.profile_image.medium}
+            name={user.name}
+            username={user.username}
+            darkBackground
+          />
+          <CloseButton onClick={handleOnClick}>
+            <VscChromeClose color='white' size='24px' />
+          </CloseButton>
+        </Arranger>
       </Details>
     </Container>
     , document.querySelector('#modal'))
