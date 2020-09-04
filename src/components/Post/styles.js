@@ -1,5 +1,15 @@
 import styled from 'styled-components'
 
+export const PostContainer = styled.div`
+  display: inline-block;
+  width: 100%;
+  margin-right: 16px;
+  
+  &::last-child {
+    margin: 0;
+  }
+`
+
 export const ImgContainer = styled.div`
   width: 100%;
   padding-bottom: 100%;

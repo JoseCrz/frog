@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { Img, ImgContainer, Details, UserPicture, UserName, UserHandle } from './styles'
+import { PostContainer, Img, ImgContainer, Details, UserPicture, UserName, UserHandle } from './styles'
+
 export const Post = ({ pictureUrl, userName, userHandle, userPicture }) => {
   return (
-    <>
+    <PostContainer>
       <ImgContainer>
         <Img src={pictureUrl} />
       </ImgContainer>
@@ -14,6 +15,6 @@ export const Post = ({ pictureUrl, userName, userHandle, userPicture }) => {
           <UserHandle>{userHandle}</UserHandle>
         </div>
       </Details>
-    </>
+    </PostContainer>
   )
 }
