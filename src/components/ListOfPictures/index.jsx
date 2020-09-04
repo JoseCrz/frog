@@ -1,17 +1,14 @@
 import React from 'react'
+import { Picture } from '../Picture'
 
-import { Grid, ImgContainer, Img, P } from './styles'
+import { Grid, P } from './styles'
 export const ListOfPictures = ({ pictures, listTitle }) => {
   return (
     <>
       <P>{listTitle}</P>
       <Grid>
         {
-          pictures.map(picture => (
-            <ImgContainer key={picture.id}>
-              <Img src={picture.urls.small} />
-            </ImgContainer>
-          ))
+          pictures.map(picture => <Picture key={picture.id} urls={picture.urls} width={picture.width} height={picture.height} />)
         }
       </Grid>
     </>
