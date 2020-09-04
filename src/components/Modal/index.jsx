@@ -1,17 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ReactDOM from 'react-dom'
+import { Context } from '../../Context'
 
 import { UserDetails } from '../UserDetails'
 
 import { Container, Img, Details } from './styles'
 
 export const Modal = ({ isModalOpen }) => {
+  const { currentPicture } = useContext(Context)
+  const { urls, user } = currentPicture
+
   if (!isModalOpen) return null
   return ReactDOM.createPortal(
     <Container>
-      <Img src='https://images.unsplash.com/photo-1599009432647-d819387c53c9?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE2MzExOX0' />
+      <Img src={urls.full} />
       <Details>
-        <UserDetails />
+        <UserDetails
+          profileImage={user.profile_image.medium}
+          name={user.name}
+          username={user.username}
+        />
       </Details>
     </Container>
     , document.querySelector('#modal'))
