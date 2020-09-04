@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 import { Context } from '../../Context'
 import { useNearScreen } from '../../hooks/useNearScreen'
 
@@ -23,3 +24,7 @@ export const Picture = React.memo(
     )
   }
 )
+
+Picture.propTypes = {
+  picture: PropTypes.object.isRequired
+}
