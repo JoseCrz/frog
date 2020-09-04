@@ -18,7 +18,7 @@ ${({ theme }) => css`
   body {
     margin: 0;
     padding: 0;
-    background: var(--background);
+    background: #fafafa;
   }
 
   h1,
