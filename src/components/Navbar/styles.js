@@ -4,6 +4,7 @@ export const Nav = styled.nav`
   grid-area: navbar;
   background: var(--background);
   border-top: 1px solid lightgray;
+  z-index: 9999;
 `
 
 export const Ul = styled.ul`
