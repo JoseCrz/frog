@@ -1,4 +1,6 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
+
 import { Context } from '../../Context'
 
 import { useNearScreen } from '../../hooks/useNearScreen'
@@ -25,4 +27,8 @@ export const Post = ({ post }) => {
       <UserDetails name={user.name} username={user.username} profileImage={user.profile_image.medium} />
     </PostContainer>
   )
+}
+
+Post.propTypes = {
+  post: PropTypes.object.isRequired
 }
