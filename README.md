@@ -15,6 +15,11 @@ https://frog-app.vercel.app
 * Vercel
 * Webpack
 
+## 📸 Screenshots
+![](https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-1.png)
+![](https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-2.png)
+![](https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-3.png)
+
 ## ⚙️ Installation
 
 ```
