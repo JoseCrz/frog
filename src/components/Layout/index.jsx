@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { Context } from '../../Context'
 
@@ -26,4 +27,9 @@ export const Layout = ({ children, pageName }) => {
       <Modal isModalOpen={isModalOpen} />
     </>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  pageName: PropTypes.string.isRequired
 }
