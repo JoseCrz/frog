@@ -21,9 +21,9 @@ https://frog-app.vercel.app
 * Vercel
 ****
 ## 📸 Screenshots
-<img src="https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-1.png" height="500px"/>
-<img src="https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-2.png" height="500px"/>
-<img src="https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-3.png" height="500px"/>
+<img src="https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-1.png" height="500px" style="display: inline-block;"/>
+<img src="https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-2.png" height="500px" style="display: inline-block;"/>
+<img src="https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-3.png" height="500px" style="display: inline-block;"/>
 
 ## ⚙️ Installation
 Download or clone this repository and run the following command:
