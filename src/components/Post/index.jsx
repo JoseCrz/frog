@@ -3,13 +3,14 @@ import React from 'react'
 import { UserDetails } from '../UserDetails'
 import { PostContainer, Img, ImgContainer } from './styles'
 
-export const Post = ({ pictureUrl, userName, userHandle, userPicture }) => {
+export const Post = ({ post }) => {
+  const { urls, user } = post
   return (
     <PostContainer>
       <ImgContainer>
-        <Img src={pictureUrl} />
+        <Img src={urls.regular} />
       </ImgContainer>
-      <UserDetails name={userName} username={userHandle} profileImage={userPicture} />
+      <UserDetails name={user.name} username={user.username} profileImage={user.profile_image.medium} />
     </PostContainer>
   )
 }

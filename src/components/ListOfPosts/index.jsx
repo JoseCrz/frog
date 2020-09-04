@@ -12,7 +12,7 @@ export const ListOfPost = ({ listTitle }) => {
       <Scroller>
         <Container>
           {
-            postsMock.map(post => <Post key={post.id} {...post} />)
+            postsMock.map(post => <Post key={post.id} post={post} />)
           }
         </Container>
 
