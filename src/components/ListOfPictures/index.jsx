@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Masonry from 'react-responsive-masonry'
 import { Picture } from '../Picture'
 
 import { P } from './styles'
+
 export const ListOfPictures = ({ pictures, listTitle }) => {
-  console.log('ListOfPictures -> pictures', pictures)
   return (
     <>
       <P>{listTitle}</P>
@@ -15,4 +16,9 @@ export const ListOfPictures = ({ pictures, listTitle }) => {
       </Masonry>
     </>
   )
+}
+
+ListOfPictures.propTypes = {
+  pictures: PropTypes.array.isRequired,
+  listTitle: PropTypes.string.isRequired
 }
