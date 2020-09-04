@@ -11,17 +11,19 @@ https://frog-app.vercel.app
 
 ## 🛠 Technology:
 * React
+* Reach Router
 * PropTypes
 * Hooks
 * Styled Components
+* React Icons
 * Babel
 * Webpack
 * Vercel
 ****
 ## 📸 Screenshots
-![](https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-1.png)
-![](https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-2.png)
-![](https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-3.png)
+<img src="https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-1.png" height="500px"/>
+<img src="https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-2.png" height="500px"/>
+<img src="https://jose-stuff.s3.us-east-2.amazonaws.com/Frog/screenshot-3.png" height="500px"/>
 
 ## ⚙️ Installation
 Download or clone this repository and run the following command:
