@@ -4,10 +4,15 @@ export const Context = createContext()
 
 const Provider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [currentPicture, setCurrentPicture] = useState({})
 
   const value = {
+    currentPicture,
     isModalOpen,
-    activateModal: () => setIsModalOpen(true),
+    activateModal: ({ picture }) => {
+      setCurrentPicture(picture)
+      setIsModalOpen(true)
+    },
     deactivateModal: () => setIsModalOpen(false)
   }
 

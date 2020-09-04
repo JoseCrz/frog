@@ -4,12 +4,14 @@ import { useNearScreen } from '../../hooks/useNearScreen'
 
 import { ImgContainer, Img } from './styles'
 
-export const Picture = ({ urls, width, height }) => {
+export const Picture = ({ picture }) => {
   const { activateModal } = useContext(Context)
   const [show, element] = useNearScreen()
+
+  const { height, width, urls } = picture
   const aspectRatio = (height / width) * 100
 
-  const handleOnClick = () => activateModal()
+  const handleOnClick = () => activateModal({ picture })
 
   return (
     <ImgContainer ref={element} aspectRatio={aspectRatio}>
