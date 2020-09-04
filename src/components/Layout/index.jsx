@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 
 import { Navbar } from '../Navbar'
 
-import { Wrapper } from './styles'
+import { Wrapper, Main } from './styles'
 
 export const Layout = ({ children, pageName }) => {
   return (
@@ -12,11 +12,11 @@ export const Layout = ({ children, pageName }) => {
         <title>{`Frog | ${pageName}`}</title>
       </Helmet>
       <Wrapper>
-        <main>
+        <Main>
           {
             children
           }
-        </main>
+        </Main>
         <Navbar />
       </Wrapper>
     </>
