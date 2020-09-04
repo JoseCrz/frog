@@ -9,7 +9,7 @@ export const Post = ({ pictureUrl, userName, userHandle, userPicture }) => {
       <ImgContainer>
         <Img src={pictureUrl} />
       </ImgContainer>
-      <UserDetails userName={userName} userHandle={userHandle} userPicture={userPicture} />
+      <UserDetails name={userName} username={userHandle} profileImage={userPicture} />
     </PostContainer>
   )
 }

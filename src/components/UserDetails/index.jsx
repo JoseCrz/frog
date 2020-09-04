@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { Details, UserPicture, UserName, UserHandle } from './styles'
+import { Details, ProfileImg, Name, Username } from './styles'
 
-export const UserDetails = ({ userPicture, userName, userHandle }) => {
+export const UserDetails = ({ profileImage, name, username }) => {
   return (
     <Details>
-      <UserPicture src={userPicture} alt='' />
+      <ProfileImg src={profileImage} alt='' />
       <div>
-        <UserName>{userName}</UserName>
-        <UserHandle>{userHandle}</UserHandle>
+        <Name>{name}</Name>
+        <Username>{username}</Username>
       </div>
     </Details>
   )
