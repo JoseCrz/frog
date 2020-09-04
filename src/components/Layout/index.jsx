@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Helmet } from 'react-helmet'
+import { Context } from '../../Context'
 
 import { Navbar } from '../Navbar'
 import { Modal } from '../Modal'
@@ -7,6 +8,8 @@ import { Modal } from '../Modal'
 import { Wrapper, Main } from './styles'
 
 export const Layout = ({ children, pageName }) => {
+  const { isModalOpen } = useContext(Context)
+
   return (
     <>
       <Helmet>
@@ -20,7 +23,7 @@ export const Layout = ({ children, pageName }) => {
         </Main>
         <Navbar />
       </Wrapper>
-      <Modal />
+      <Modal isModalOpen={isModalOpen} />
     </>
   )
 }
