@@ -10,5 +10,7 @@ export const Wrapper = styled.div`
 
 export const Main = styled.main`
   padding: 0px 16px;
+  overflow: scroll;
+  max-height: 100%;
   grid-area: main;
 `
