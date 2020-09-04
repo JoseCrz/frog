@@ -7,6 +7,7 @@ ${({ theme }) => css`
     --text-color: #000000;
     --text-font: 'Roboto', sans-serif;
     --title-font: 'Comfortaa', cursive;
+    --accent-gradient: linear-gradient(202.17deg, #FF00D6 8.58%, #FF4D00 91.42%);
   }
   
   * {

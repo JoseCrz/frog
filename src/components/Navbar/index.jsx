@@ -5,6 +5,8 @@ import { AiOutlineHome, AiFillHome } from 'react-icons/ai'
 import { BsChatDots, BsChatDotsFill } from 'react-icons/bs'
 import { RiUserLine, RiUserFill, RiSearchLine, RiSearchFill } from 'react-icons/ri'
 
+import { ActionButton } from '../ActionButton'
+
 import { Nav, Ul, Li } from './styles'
 export const Navbar = () => {
   return (
@@ -20,6 +22,9 @@ export const Navbar = () => {
             <Link to='/'>
               <RiSearchLine />
             </Link>
+          </Li>
+          <Li>
+            <ActionButton />
           </Li>
           <Li>
             <Link to='/'>
