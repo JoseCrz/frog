@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import { Navbar } from '../Navbar'
+import { Modal } from '../Modal'
 
 import { Wrapper, Main } from './styles'
 
@@ -19,6 +20,7 @@ export const Layout = ({ children, pageName }) => {
         </Main>
         <Navbar />
       </Wrapper>
+      <Modal />
     </>
   )
 }
