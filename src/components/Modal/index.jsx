@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 import { VscChromeClose } from 'react-icons/vsc'
 
@@ -41,4 +42,8 @@ export const Modal = ({ isModalOpen }) => {
       </Details>
     </Container>
     , document.querySelector('#modal'))
+}
+
+Modal.propTypes = {
+  isModalOpen: PropTypes.bool.isRequired
 }
