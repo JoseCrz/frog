@@ -13,7 +13,6 @@ export const Picture = React.memo(
     const aspectRatio = (height / width) * 100
 
     const handleOnClick = () => activateModal({ picture })
-    console.log('Picture -> picture', picture)
 
     return (
       <ImgContainer ref={element} aspectRatio={aspectRatio}>
