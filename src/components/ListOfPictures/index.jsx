@@ -20,5 +20,5 @@ export const ListOfPictures = ({ pictures, listTitle }) => {
 
 ListOfPictures.propTypes = {
   pictures: PropTypes.array.isRequired,
-  listTitle: PropTypes.string.isRequired
+  listTitle: PropTypes.string
 }
