@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 import { StyledButton } from './styles'
 
-export const Button = ({ children, onClick }) => {
-  return <StyledButton onClick={onClick}>{children}</StyledButton>
+export const Button = ({ children, onClick, isPrimary }) => {
+  return <StyledButton isPrimary={isPrimary} onClick={onClick}>{children}</StyledButton>
 }
 
 Button.propTypes = {

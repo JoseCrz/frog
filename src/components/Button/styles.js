@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const StyledButton = styled.button`
-  background: transparent;
+  background: ${({ isPrimary }) => isPrimary ? 'var(--text-color)' : 'transparent'};
+  color: ${({ isPrimary }) => isPrimary ? 'white' : 'var(--text-color)'};
   border: 2px solid var(--text-color);
   border-radius: 6px;
   text-transform: uppercase;
