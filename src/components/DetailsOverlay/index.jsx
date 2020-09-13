@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { VscChromeClose } from 'react-icons/vsc'
 
-import { UserDetails } from '../UserDetails'
+import { PictureDetails } from '../PictureDetails'
 
 import { Details, Arranger, CloseButton } from './styles'
 
@@ -10,7 +10,7 @@ export const DetailsOverlay = ({ isVisible, user, onCloseButtonClick }) => {
   return (
     <Details isVisible={isVisible}>
       <Arranger>
-        <UserDetails
+        <PictureDetails
           profileImage={user.profile_image.medium}
           name={user.name}
           username={user.username}

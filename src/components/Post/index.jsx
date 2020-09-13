@@ -5,7 +5,7 @@ import { Context } from '../../Context'
 
 import { useNearScreen } from '../../hooks/useNearScreen'
 
-import { UserDetails } from '../UserDetails'
+import { PictureDetails } from '../PictureDetails'
 import { PostContainer, Img, ImgContainer } from './styles'
 
 export const Post = ({ post }) => {
@@ -24,7 +24,7 @@ export const Post = ({ post }) => {
           show && <Img onClick={handleOnClick} src={urls.regular} />
         }
       </ImgContainer>
-      <UserDetails name={user.name} username={user.username} profileImage={user.profile_image.medium} />
+      <PictureDetails name={user.name} username={user.username} profileImage={user.profile_image.medium} />
     </PostContainer>
   )
 }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Details, ProfileImg, Name, Username } from './styles'
 
-export const UserDetails = ({ profileImage, name, username, darkBackground }) => {
+export const PictureDetails = ({ profileImage, name, username, darkBackground }) => {
   return (
     <Details darkBackground={darkBackground}>
       <ProfileImg src={profileImage} alt='' />
@@ -15,7 +15,7 @@ export const UserDetails = ({ profileImage, name, username, darkBackground }) =>
   )
 }
 
-UserDetails.propTypes = {
+PictureDetails.propTypes = {
   profileImage: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
