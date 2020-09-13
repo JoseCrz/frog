@@ -12,6 +12,7 @@ import { Container, Arranger, ThumbImg, LoadedImage, Details, CloseButton } from
 export const Modal = ({ isModalOpen }) => {
   const { currentPicture, deactivateModal } = useContext(Context)
   const [isPictureLoaded, setIsPictureLoaded] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
   const { urls, user } = currentPicture
 
   const handleOnLoad = () => setIsPictureLoaded(true)
@@ -26,8 +27,8 @@ export const Modal = ({ isModalOpen }) => {
   return ReactDOM.createPortal(
     <Container>
       <ThumbImg src={urls.regular} isPictureLoaded={isPictureLoaded} />
-      <LoadedImage onLoad={handleOnLoad} src={urls.full} isPictureLoaded={isPictureLoaded} />
-      <Details>
+      <LoadedImage onClick={() => setIsVisible(!isVisible)} onLoad={handleOnLoad} src={urls.full} isPictureLoaded={isPictureLoaded} />
+      <Details isVisible={isVisible}>
         <Arranger>
           <UserDetails
             profileImage={user.profile_image.medium}
