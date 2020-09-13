@@ -5,8 +5,7 @@ import { createUserUrl, addClientIdToUrl } from '../utils/urlConstructors'
 
 export const useFetchUser = ({ username }) => {
   const [user, setUser] = useState({})
-  const [photos, setPhotos] = useState({})
-
+  const [userPhotosEndpoint, setUserPhotosEndpoint] = useState('')
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -14,11 +13,9 @@ export const useFetchUser = ({ username }) => {
       const userUrl = createUserUrl({ username })
 
       try {
-        const { data: userData } = await axios.get(userUrl)
-        const userPhotosUrl = addClientIdToUrl(userData.links.photos)
-        const { data: photosData } = await axios.get(userPhotosUrl)
-        setPhotos(photosData)
-        setUser(userData)
+        const { data } = await axios.get(userUrl)
+        setUserPhotosEndpoint(addClientIdToUrl(data.links.photos))
+        setUser(data)
         setLoading(false)
       } catch (error) {
         console.log(error)
@@ -29,5 +26,5 @@ export const useFetchUser = ({ username }) => {
     fetchUser()
   }, [])
 
-  return { user, photos, loading }
+  return { user, userPhotosEndpoint, loading }
 }
