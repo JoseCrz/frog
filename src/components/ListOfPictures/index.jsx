@@ -2,10 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Masonry from 'react-responsive-masonry'
 import { Picture } from '../Picture'
+import { Button } from '../Button'
+import { useFetchPictures } from '../../hooks/useFetchPictures'
 
 import { P } from './styles'
 
-export const ListOfPictures = ({ pictures, listTitle }) => {
+export const ListOfPictures = ({ listTitle, endpoint }) => {
+  const { pictures, nextPage } = useFetchPictures({ initialPage: 2 })
+  const handleOnClick = () => nextPage()
   return (
     <>
       <P>{listTitle}</P>
@@ -14,11 +18,12 @@ export const ListOfPictures = ({ pictures, listTitle }) => {
           pictures.map(picture => <Picture key={picture.id} picture={picture} />)
         }
       </Masonry>
+      <Button onClick={handleOnClick}>See More</Button>
     </>
   )
 }
 
 ListOfPictures.propTypes = {
-  pictures: PropTypes.array.isRequired,
-  listTitle: PropTypes.string
+  listTitle: PropTypes.string,
+  endpoint: PropTypes.string
 }
