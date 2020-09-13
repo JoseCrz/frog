@@ -8,7 +8,7 @@ import { Loader } from '../../components/Loader'
 import { useFetchUser } from '../../hooks/useFetchUser'
 
 export const User = ({ username }) => {
-  const { user, photos, loading } = useFetchUser({ username })
+  const { user, userPhotosEndpoint, loading } = useFetchUser({ username })
 
   return (
     <Layout pageName={username}>
@@ -16,7 +16,7 @@ export const User = ({ username }) => {
         loading ? <Loader /> : <UserInfo name={user.name} location={user.location} pictureUrl={user.profile_image.large} />
       }
       {
-        loading ? <Loader /> : <ListOfPictures pictures={photos} />
+        loading ? <Loader /> : <ListOfPictures endpoint={userPhotosEndpoint} />
       }
     </Layout>
   )

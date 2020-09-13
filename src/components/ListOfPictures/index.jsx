@@ -8,8 +8,10 @@ import { useFetchPictures } from '../../hooks/useFetchPictures'
 import { P } from './styles'
 
 export const ListOfPictures = ({ listTitle, endpoint }) => {
-  const { pictures, nextPage } = useFetchPictures({ initialPage: 2 })
+  const { pictures, nextPage } = useFetchPictures({ initialPage: 2, endpoint })
+
   const handleOnClick = () => nextPage()
+
   return (
     <>
       <P>{listTitle}</P>
