@@ -7,8 +7,8 @@ import { useFetchPictures } from '../../hooks/useFetchPictures'
 
 import { P } from './styles'
 
-export const ListOfPictures = ({ listTitle, endpoint }) => {
-  const { pictures, nextPage } = useFetchPictures({ initialPage: 2, endpoint })
+export const ListOfPictures = ({ listTitle, endpoint, initialPage }) => {
+  const { pictures, nextPage } = useFetchPictures({ endpoint, initialPage })
 
   const handleOnClick = () => nextPage()
 
@@ -27,5 +27,6 @@ export const ListOfPictures = ({ listTitle, endpoint }) => {
 
 ListOfPictures.propTypes = {
   listTitle: PropTypes.string,
-  endpoint: PropTypes.string
+  endpoint: PropTypes.string,
+  initialPage: PropTypes.number
 }

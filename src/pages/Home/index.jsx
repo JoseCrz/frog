@@ -9,7 +9,7 @@ export const Home = () => {
     <Layout pageName='Home'>
       <Header>Discover</Header>
       <ListOfPost listTitle={'What\'s new today'} />
-      <ListOfPictures listTitle='Browse All' />
+      <ListOfPictures listTitle='Browse All' initialPage={2} />
     </Layout>
   )
 }
