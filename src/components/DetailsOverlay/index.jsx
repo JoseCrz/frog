@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { VscChromeClose } from 'react-icons/vsc'
 
 import { UserDetails } from '../UserDetails'
@@ -21,4 +22,10 @@ export const DetailsOverlay = ({ isVisible, user, onCloseButtonClick }) => {
       </Arranger>
     </Details>
   )
+}
+
+DetailsOverlay.propTypes = {
+  isVisible: PropTypes.bool.isRequired,
+  user: PropTypes.object.isRequired,
+  onCloseButtonClick: PropTypes.func.isRequired
 }
