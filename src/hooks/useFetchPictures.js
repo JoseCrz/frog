@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { baseApiURL } from '../config'
 
-export const useFetchPictures = ({ initialPage = 1 } = {}) => {
+export const useFetchPictures = ({ initialPage = 1, endpoint } = {}) => {
   const [loading, setLoading] = useState(false)
   const [pictures, setPictures] = useState([])
   const [page, setPage] = useState(initialPage)
@@ -13,7 +13,7 @@ export const useFetchPictures = ({ initialPage = 1 } = {}) => {
     const fetchPictures = async () => {
       setLoading(true)
       try {
-        const { data } = await axios.get(`${baseApiURL}&page=${page}`)
+        const { data } = await axios.get(`${endpoint || baseApiURL}&page=${page}`)
         const newPictures = [
           ...pictures,
           ...data
