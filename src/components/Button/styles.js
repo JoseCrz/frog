@@ -9,5 +9,5 @@ export const StyledButton = styled.button`
   font-weight: 900;
   width: 100%;
   height: 50px;
-  margin: 30px 0;
+  margin: 0 0 16px 0;
 `
