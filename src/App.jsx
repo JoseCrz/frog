@@ -15,7 +15,7 @@ export const App = () => {
       <GlobalStyle />
       <Router>
         <Home path='/' />
-        <User path='/user' />
+        <User path='/user/:username' />
       </Router>
     </>
   )
