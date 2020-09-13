@@ -1,2 +1,3 @@
-const clientId = 'tx1hiV9GeFj4XpOEIithuiy_sZSbNDZZJfNpraGML0c'
+export const clientId = 'tx1hiV9GeFj4XpOEIithuiy_sZSbNDZZJfNpraGML0c'
 export const baseApiURL = `https://api.unsplash.com/photos/?client_id=${clientId}`
+export const baseURL = 'https://api.unsplash.com'
