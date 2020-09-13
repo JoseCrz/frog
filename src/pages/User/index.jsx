@@ -1,13 +1,23 @@
 import React from 'react'
 
-import { userMock } from '../../mocks/userMock'
 import { Layout } from '../../components/Layout'
 import { UserInfo } from '../../components/UserInfo'
+import { ListOfPictures } from '../../components/ListOfPictures'
+import { Loader } from '../../components/Loader'
 
-export const User = () => {
+import { useFetchUser } from '../../hooks/useFetchUser'
+
+export const User = ({ username }) => {
+  const { user, photos, loading } = useFetchUser({ username })
+
   return (
-    <Layout>
-      <UserInfo name={userMock.name} location={userMock.location} pictureUrl={userMock.profile_image.large} />
+    <Layout pageName={username}>
+      {
+        loading ? <Loader /> : <UserInfo name={user.name} location={user.location} pictureUrl={user.profile_image.large} />
+      }
+      {
+        loading ? <Loader /> : <ListOfPictures pictures={photos} />
+      }
     </Layout>
   )
 }
