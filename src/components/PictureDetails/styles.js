@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link as RouterLink } from '@reach/router'
 
 export const Details = styled.div`
   margin-top: 16px;
@@ -23,4 +24,9 @@ export const Name = styled.p`
 export const Username = styled.p`
   font-size: 11px;
   margin: 0;
+`
+
+export const StyledLink = styled(RouterLink)`
+  text-decoration: none;
+  color: ${({ darkBackground }) => darkBackground ? 'color: white' : 'var(--text-color)'};
 `
